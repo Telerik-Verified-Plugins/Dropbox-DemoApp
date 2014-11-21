@@ -2,15 +2,15 @@
   "ProjectName": "Dropbox",
   "ProjectGuid": "2d6cfe1c-a7f6-4062-a40e-c5bd0e44e2c6",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.Dropbox",
+  "AppIdentifier": "com.telerik.plugindemo.dropbox",
   "DisplayName": "Dropbox",
   "Author": "",
-  "Description": "",
+  "Description": "Dropbox",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",
-	"2"
+    "2"
   ],
   "iOSBackgroundMode": [],
   "WP8TileTitle": "",
@@ -22,6 +22,7 @@
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "FrameworkVersion": "3.5.0",
   "CorePlugins": [
+    "com.telerik.dropbox",
     "org.apache.cordova.battery-status",
     "org.apache.cordova.camera",
     "org.apache.cordova.console",
@@ -73,5 +74,11 @@
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
   ],
-  "Framework": "Cordova"
+  "Framework": "Cordova",
+  "CordovaPluginVariables": {
+    "com.telerik.dropbox": {
+      "APP_KEY": "y3j3mq8qfjin0s2",
+      "APP_SECRET": "5j4y7i2mdq9srmv"
+    }
+  }
 }
