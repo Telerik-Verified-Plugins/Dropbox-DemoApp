@@ -30,15 +30,13 @@
         </div>
         <h3>Dropbox Plugin Demo</h3>
         <p>
-            TODO ://
+            The Dropbox plugin allows your app to use Dropbox as an OAuth provider.
+            Additionally, you can upload files to the linked Dropbox account.
         </p>
         <p>
             <strong>Important</strong><br/>
             <span class="smaller">
-                Change the to: address in demo.js (twice).<br/>
-                Inside AppBuilder open Plugins, SendGrid, plugin.xml
-                and do as this comment suggests (four times in total):<br/>
-                &lt;!-- replace with your SendGrid user/pwd --&gt;
+                Make sure you replace the APP_KEY and APP_SECRET parameters in the plugin settings.
             </span>
         </p>
         <p>
@@ -54,22 +52,20 @@
         data-model="app.demoService.viewModel">
 
         <div class="demo">
-            <h3 class="hassubtitle">Setup Dropbox</h3>
+            <h3 class="hassubtitle">Connect Dropbox account</h3>
             <div class="subtitle">
-                If you must, you can send plain text email through SendGrid. Any HTML tags will be escaped in the process.
+                In case the user has the Dropbox app installed, the app will present the native Dropbox authentication UI.
+                If not, it falls back to the web interface. The account remains linked until this app is uninstalled.
             </div>
-            <button data-role="button" class="button" data-bind="click:setup">Setup Dropbox</button>
+            <button data-role="button" class="button large" data-bind="click:setup">Connect Dropbox</button>
 
             <br/>
             <h3 class="hassubtitle">Save to Dropbox</h3>
             <div class="subtitle">
-                HTML mail can contain any custom tags you want.
-                If you want to add CSS, make sure you inline them as style attributes.
-                You can even grab parts of the DOM, like the table below. Click the button to see this in action.
+                Capture an image and upload it to the Apps/AppName/Saves folder of your Dropbox account.
             </div>
 
-            <button data-role="button" class="button" data-bind="click: capture">Save to Dropbox</button>
-
+            <button data-role="button" class="button large" data-bind="click: capture">Save to Dropbox</button>
         </div>
 
     </div>

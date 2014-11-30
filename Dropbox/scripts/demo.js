@@ -6,8 +6,20 @@
 
         setup: function () {
             if (!this.checkSimulator()) {
-                Dropbox.linkedAccounts(function(result){
-                       Dropbox.linkAccount();
+                dropbox.linkedAccounts(function(accounts) {
+                    if (accounts.length == 0) {
+                      dropbox.linkAccount(
+                          function(result) {
+                              alert("Linked? " + result.success);
+                          });
+                    } else {
+                      navigator.notification.alert(
+                            JSON.stringify(accounts),
+                                  null,
+                                  "Linked account(s)",
+                                  "OK, that's nice"
+                            );
+                      }
                 });
             }
         },
@@ -18,7 +30,7 @@
                     files : [path],
                     folder: "Saves"
                 };
-                Dropbox.save(
+                dropbox.save(
                     content,
                     function (msg) {alert("SUCCESS: " + JSON.stringify(msg))},
                     function (msg) {alert("ERROR: "   + JSON.stringify(msg))}
@@ -33,7 +45,10 @@
           }, function(error){
 
           },{
-            destinationType: Camera.DestinationType.FILE_URI
+            destinationType: Camera.DestinationType.FILE_URI,
+            quality: 50,
+            targetWidth: 200,
+            targetHeight: 200
           });
         },
 
@@ -41,7 +56,7 @@
             if (window.navigator.simulator === true) {
                 alert('This plugin is not available in the simulator.');
                 return true;
-            } else if (window.Dropbox  === undefined) {
+            } else if (window.dropbox === undefined) {
                 alert('Plugin not found. Maybe you are running in AppBuilder Companion app which currently does not support this plugin.');
                 return true;
             } else {
