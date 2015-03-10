@@ -17,12 +17,11 @@
   "WP8Publisher": "",
   "WP8Capabilities": [],
   "WP8Requirements": [],
-  "WP8PublisherID": "",
-  "WP8ProductID": "",
+  "WP8PublisherID": "{ecbb105d-fcb4-47c3-a2ca-81299e93edf7}",
+  "WP8ProductID": "{73d06aee-8d88-466c-9cdb-b6caa019c07e}",
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
-  "FrameworkVersion": "3.5.0",
+  "FrameworkVersion": "3.7.0",
   "CorePlugins": [
-    "com.telerik.dropbox",
     "org.apache.cordova.battery-status",
     "org.apache.cordova.camera",
     "org.apache.cordova.console",
@@ -75,10 +74,7 @@
     "ID_RESOLUTION_HD720P"
   ],
   "Framework": "Cordova",
-  "CordovaPluginVariables": {
-    "com.telerik.dropbox": {
-      "APP_KEY": "y3j3mq8qfjin0s2",
-      "APP_SECRET": "5j4y7i2mdq9srmv"
-    }
-  }
+  "CordovaPluginVariables": {},
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8PackageIdentityName": "1234Telerik.com.telerik.plugindemo.dropbox"
 }
